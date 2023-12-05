@@ -1,0 +1,60 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #e95d58;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fffdfa;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    max-width: 25rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gif {
+    width: 95%;
+    margin: 1rem 0;
+}
+
+.btn-wrapper {
+    /* position: relative; */
+    width: fit-content;
+    margin: 0 auto;
+}
+
+button {
+    position: absolute;
+    width: 7rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    border: 1.5px solid #e95d58;
+    background-color: #fffdfa;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#yes-btn {
+    margin-left: -7.5rem;
+    background-color: #e95d58;
+    color: #fff;
+}
