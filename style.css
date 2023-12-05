@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100dvh;
     height: 100vh;
     background-color: #fffdfa;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
