@@ -7,9 +7,17 @@ const gif = document.getElementById('gif');
 const yes_btn = document.getElementById('yes-btn');
 const no_btn = document.getElementById('no-btn');
 
+const preload_image = (im_url) => {
+    let img = new Image();
+    img.src = im_url;
+}
+
+[...state1, ...state2].forEach(url => { preload_image(url); });
+
 const get_random = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)]
 }
+
 
 gif.src = get_random(state1);
 
