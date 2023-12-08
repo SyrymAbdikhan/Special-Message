@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    color: #e95d58;
+    color: #fb605b;
 }
 
 body {
@@ -12,17 +12,22 @@ body {
     align-items: center;
     height: 100dvh;
     height: 100vh;
-    background-color: #fffdfa;
+    background: #fff;
+    background: radial-gradient(circle, #fff 50%, #ffebdd 75%, #f9d4e4 90%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .wrapper {
     max-width: 25rem;
-    width: 95%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 2rem 1rem;
+    background: #fff;
+    box-shadow: 0 0 15px 2px #f9d4e4;
+    border-radius: 3rem;
 }
 
 #gif {
@@ -31,30 +36,39 @@ body {
 }
 
 .btn-wrapper {
-    width: fit-content;
-    margin: 0 auto;
+    height: 3rem;
 }
 
 button {
     position: absolute;
+    cursor: pointer;
     width: 7rem;
     height: 3rem;
-    margin: 0 0.5rem;
-    border-radius: 1rem;
-    border: 1.5px solid #e95d58;
+    border-radius: 1.5rem;
+    border: 1.5px solid #fb605b;
     background-color: #fffdfa;
     font-size: 1rem;
     font-weight: 600;
-    transition: 0.2s all ease-in-out;
-    cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.05);
 }
 
 #yes-btn {
     margin-left: -7.5rem;
-    background-color: #e95d58;
+    background-color: #fb605b;
     color: #fff;
+}
+
+#no-btn {
+    margin-left: 0.5rem;
+}
+
+.links {
+    position: fixed;
+    text-align: center;
+    bottom: 1rem;
+}
+
+.links a {
+    color: #99a;
+    text-decoration: none;
+    font-size: 0.7rem;
 }
