@@ -10,8 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
     height: 100vh;
+    height: 100svh;
     background: #fff;
     background: radial-gradient(circle, #fff 50%, #ffebdd 75%, #f9d4e4 90%);
     font-family: Verdana, Geneva, Tahoma, sans-serif;

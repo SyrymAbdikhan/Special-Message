@@ -8,7 +8,7 @@ const gif = document.getElementById('gif');
 const btn_wrapper = document.querySelector('.btn-wrapper');
 const yes_btn = document.getElementById('yes-btn');
 const no_btn = document.getElementById('no-btn');
-const radius = 100;
+const radius = 70;
 var counter = 0;
 
 const preload_image = (im_url) => {
@@ -54,7 +54,7 @@ const change_pos = (e) => {
     var rect = no_btn.getBoundingClientRect();
     var marginX = parseInt(getComputedStyle(no_btn).marginLeft);
 
-    var cx = rect.x - marginX + rect.width/2;
+    var cx = rect.x + rect.width/2;
     var cy = rect.y + rect.height/2;
 
     var mx = e.clientX;
