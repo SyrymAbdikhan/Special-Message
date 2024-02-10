@@ -3,22 +3,26 @@ const state1 = ['./imgs/state1-2.gif', './imgs/state1-1.gif'];
 const state2 = ['./imgs/state2-2.gif', './imgs/state2-1.gif'];
 const state3 = ['./imgs/state3-2.gif', './imgs/state3-1.gif'];
 
+[...state1, ...state2, ...state3].forEach((url) => {
+    let img = new Image();
+    img.src = url;
+});
+
 const title = document.getElementById('title');
 const gif = document.getElementById('gif');
+
 const btn_wrapper = document.querySelector('.btn-wrapper');
 const yes_btn = document.getElementById('yes-btn');
 const no_btn = document.getElementById('no-btn');
+
 const radius = 70;
 var counter = 0;
-
-const preload_image = (im_url) => {
-    let img = new Image();
-    img.src = im_url;
-};
 
 const get_random = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
 };
+
+gif.src = get_random(state1);
 
 const map_val = (n, start1, stop1, start2, stop2) => {
     return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
@@ -33,7 +37,7 @@ const change_text = (text) => {
 
 yes_btn.addEventListener('click', (e) => {
     gif.src = get_random(state2);
-    change_text('Aaaaaww, I like you too');
+    change_text('Aaaaaww love you <3');
 });
 
 no_btn.addEventListener('click', (e) => {
@@ -47,7 +51,7 @@ no_btn.addEventListener('click', (e) => {
         return;
     }
     gif.src = get_random(state3);
-    change_text('Fuawq youu...');
+    change_text('Oh.. ok..');
 });
 
 const change_pos = (e) => {
@@ -72,8 +76,5 @@ const change_pos = (e) => {
     no_btn.style.left = new_x + 'px';
     no_btn.style.top = new_y + 'px';
 };
-
-[...state1, ...state2, ...state3].forEach((url) => { preload_image(url); });
-gif.src = get_random(state1);
 
 document.onmousemove = change_pos;
